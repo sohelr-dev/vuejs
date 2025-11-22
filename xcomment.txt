@@ -1,0 +1,6 @@
+1.install
+========================================
+npm create vue@latest
+
+2.than space to select TypeScript
+
