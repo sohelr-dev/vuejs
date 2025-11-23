@@ -8,3 +8,6 @@ npm create vue@latest
 ===============
 Vue (Official)
 
+3.install bootstrap
+=========================
+npm install bootstrap
