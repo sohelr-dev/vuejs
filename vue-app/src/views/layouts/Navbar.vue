@@ -3,8 +3,8 @@
     <div
       class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom"
     >
-      <a
-        href="/"
+      <router-link
+        to="/"
         class="d-flex align-items-center link-body-emphasis text-decoration-none"
       >
         <svg
@@ -23,20 +23,20 @@
             fill="currentColor"
           ></path>
         </svg>
-        <span class="fs-4">Pricing example</span>
-      </a>
+        <span class="fs-4">Vue App</span>
+      </router-link>
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#"
-          >Features</a
+        <router-link  class="me-3 py-2 link-body-emphasis text-decoration-none" to="/"
+          >Home</router-link
         >
-        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#"
-          >Enterprise</a
+        <router-link  class="me-3 py-2 link-body-emphasis text-decoration-none" to="/form"
+          >Form</router-link
         >
-        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#"
-          >Support</a
+        <router-link  class="me-3 py-2 link-body-emphasis text-decoration-none" to="/compare"
+          >Compare</router-link
         >
-        <a class="py-2 link-body-emphasis text-decoration-none" href="#"
-          >Pricing</a
+        <router-link  class="py-2 link-body-emphasis text-decoration-none" to="/price"
+          >Pricing</router-link
         >
       </nav>
     </div>

@@ -12,8 +12,9 @@ import Princing from './views/pages/Princing.vue';
     <Navbar/>
    
     <main>
-      <Princing/>
-      <Compare/>
+      <router-view/>
+      <!-- <Princing/>
+      <Compare/> -->
       
       
     </main>
