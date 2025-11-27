@@ -24,6 +24,7 @@ import PriceCard from '@/components/PriceCard.vue';
           <PriceCard 
            titile="free Plan" 
             price ="15" 
+            :id="1"
             button="Sign up for free" 
             :btnDisable="true"
             primaryClass="btn-outline-primary">
@@ -38,7 +39,7 @@ import PriceCard from '@/components/PriceCard.vue';
           
         </div>
         <div class="col">
-          <PriceCard titile="Standerd Plan "/>
+          <PriceCard :id="2" titile="Standerd Plan "/>
         </div>
         <div class="col">
           <div class="card mb-4 rounded-3 shadow-sm">

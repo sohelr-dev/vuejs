@@ -17,7 +17,8 @@
           btnDisable: {
                type: Boolean,
                default: false
-          }
+          },
+          id:Number
      })
 </script>
 <template>
@@ -33,9 +34,9 @@
           Same as to card
       </slot>
       <input type="text" name="" id=""  :disabled="btnDisable">
-      <button type="button" :class="`w-100 btn btn-lg btn-outline-primary ${primaryClass}`" >
+      <router-link :to="`plain-details/${id}`" type="button" :class="`w-100 btn btn-lg btn-outline-primary ${primaryClass}`" >
         {{ button }}
-      </button>
+      </router-link>
     </div>
   </div>
 </template>

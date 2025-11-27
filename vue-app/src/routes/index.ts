@@ -1,6 +1,7 @@
 import Compare from "@/views/pages/Compare.vue";
 import Form from "@/views/pages/Form.vue";
 import Home from "@/views/pages/Home.vue";
+import PlanDetails from "@/views/pages/Plan-details.vue";
 import Princing from "@/views/pages/Princing.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
@@ -11,6 +12,7 @@ const myRouter =createRouter({
           {path:'/price',component:Princing},
           {path:'/compare',component:Compare},
           {path:'/form',component:Form},
+          {path:'/plain-details/:id',component:PlanDetails},
      ]
 });
 export default myRouter
