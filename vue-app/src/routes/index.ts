@@ -1,7 +1,9 @@
 import Compare from "@/views/pages/Compare.vue";
 import Form from "@/views/pages/Form.vue";
 import Home from "@/views/pages/Home.vue";
+import ManagePost from "@/views/pages/ManagePost.vue";
 import PlanDetails from "@/views/pages/Plan-details.vue";
+import PostDetails from "@/views/pages/PostDetails.vue";
 import Princing from "@/views/pages/Princing.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
@@ -13,6 +15,8 @@ const myRouter =createRouter({
           {path:'/compare',component:Compare},
           {path:'/form',component:Form},
           {path:'/plain-details/:id',component:PlanDetails},
+          {path:'/posts',component:ManagePost},
+          {path:'/post-details/:id',component:PostDetails},
      ]
 });
 export default myRouter
