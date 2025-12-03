@@ -20,6 +20,9 @@ axios.get("https://jsonplaceholder.typicode.com/posts")
 </script>
 <template>
      <div class="conatiner">
+          <div class="text-end">
+               <router-link to="posts/create" class="btn btn-success">Create Post</router-link>
+          </div>
           <div class="card">
                <div class="card-header p-2">
                     Manage Post
@@ -41,9 +44,12 @@ axios.get("https://jsonplaceholder.typicode.com/posts")
                                    <td>{{ postitem.userId }}</td>
                                    <td>{{ postitem.body }}</td>
                                    <td>{{ postitem.title }}</td>
-                                   <td>
+                                   <td class="d-flex gap-2">
                                         <router-link :to="`post-details/${postitem.id}`" class="btn btn-primary">
                                              view
+                                        </router-link>
+                                        <router-link :to="`post-edit/${postitem.id}`" class="btn btn-outline-primary">
+                                             Edit
                                         </router-link>
                                    </td>
 
