@@ -29,6 +29,9 @@
         <router-link  class="me-3 py-2 link-body-emphasis text-decoration-none" to="/"
           >Home</router-link
         >
+        <router-link  class="me-3 py-2 link-body-emphasis text-decoration-none" to="/category"
+          >Category</router-link
+        >
         <router-link  class="me-3 py-2 link-body-emphasis text-decoration-none" to="/posts"
           >Post</router-link
         >

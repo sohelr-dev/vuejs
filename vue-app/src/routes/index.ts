@@ -1,3 +1,7 @@
+import CategoryCreate from "@/views/pages/category/CategoryCreate.vue";
+import CategoryDeatails from "@/views/pages/category/CategoryDeatails.vue";
+import CategoryEdit from "@/views/pages/category/CategoryEdit.vue";
+import ManageCategories from "@/views/pages/category/ManageCategories.vue";
 import Compare from "@/views/pages/Compare.vue";
 import Form from "@/views/pages/Form.vue";
 import Home from "@/views/pages/Home.vue";
@@ -21,6 +25,11 @@ const myRouter =createRouter({
           {path:'/posts/create',component:PostCreate},
           {path:'/post-details/:id',component:PostDetails},
           {path:'/post-edit/:id',component:PostEdit},
+          {path:'/category',component:ManageCategories},
+          {path:'/category-details/:id',component:CategoryDeatails},
+          {path:'/categories/create',component:CategoryCreate},
+          {path:'/category-edit/:id',component:CategoryEdit},
+
      ]
 });
 export default myRouter
