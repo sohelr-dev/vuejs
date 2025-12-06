@@ -8,4 +8,5 @@ import myRouterView from './routes/index.ts'
 
 
 
+
 createApp(App).use(myRouterView).mount('#app')

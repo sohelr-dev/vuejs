@@ -51,8 +51,8 @@ function formSubmit(){
 </script>
 <template>
      <div class="container">
-          <h1 class="text-center">category Edit </h1>
-           <h5 class="text-end"><router-link to="/categorys" class=" btn btn-outline-primary">Back</router-link></h5>
+          <h1 class="text-center">Category Edit </h1>
+           <h5 class="text-end"><router-link to="/category" class=" btn btn-outline-primary">Back</router-link></h5>
           <div class="card">
                <form @submit.prevent="formSubmit">
                     <input type="hidden" v-model="category.id">
