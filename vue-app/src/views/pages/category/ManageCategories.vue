@@ -1,9 +1,10 @@
 <script setup lang="ts">
 
 import type { CategoryType } from '@/components/interfaces/category.interfaces';
+import { useCounterStore } from '@/store/counter';
 import axios from 'axios';
 import { ref } from 'vue';
-
+const counter =useCounterStore();
 let categories = ref<CategoryType[]>([]);
 axios.get("http://127.0.0.1:8000/api/categories")
      .then((res)=>{
@@ -23,7 +24,7 @@ axios.get("http://127.0.0.1:8000/api/categories")
           </div>
           <div class="card">
                <div class="card-header p-2 text-center">
-                    Manage Category
+                    Manage Category <span class="badge text-danger bg-primary">{{ counter.count }}</span>
                </div>
                <div class="responsive">
                     <table class="table">

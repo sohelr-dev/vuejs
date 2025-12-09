@@ -11,6 +11,7 @@ import PostCreate from "@/views/pages/PostCreate.vue";
 import PostDetails from "@/views/pages/PostDetails.vue";
 import PostEdit from "@/views/pages/PostEdit.vue";
 import Princing from "@/views/pages/Princing.vue";
+import UserCreate from "@/views/pages/users/UserCreate.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const myRouter =createRouter({
@@ -29,6 +30,7 @@ const myRouter =createRouter({
           {path:'/category-details/:id',component:CategoryDeatails},
           {path:'/categories/create',component:CategoryCreate},
           {path:'/category-edit/:id',component:CategoryEdit},
+          {path:'/create-user',component:UserCreate},
 
      ]
 });

@@ -1,13 +1,18 @@
 <script setup lang="ts">
 import type { CategoryType } from '@/components/interfaces/category.interfaces';
 import defaultCategory from '@/components/interfaces/category.interfaces';
+import { useCounterStore } from '@/store/counter';
 import axios from 'axios';
-import { reactive } from 'vue';
+import { reactive, ref } from 'vue';
 import { useRouter } from 'vue-router'; // <-- Fix here
 
 const category = reactive<CategoryType>(defaultCategory);
 
 const navigate = useRouter();
+
+const counter =useCounterStore();
+
+const newCount = ref(counter.count);
 
 function formSubmit() {
      let formdata =new FormData();
@@ -22,21 +27,38 @@ function formSubmit() {
           alert("Category created successfully.");
           // navigate.push('/category');
           category===defaultCategory;
+          // counter.count = res.data.name;
           }
      })
      .catch((error) => {
           console.log(error);
      });
 }
+
+function updateValue(){
+     counter.count=newCount.value;
+     counter.setLocal();
+
+     // localStorage.setItem('UpdateValue',String(counter.count));
+
+}
+// console.log(Number(localStorage.getItem("UpdateValue")));
+// counter.count = localStorage.getItem("UpdateValue");
+
+
 </script>
 <template>
      <div class="container">
-          <h1 class="text-center">Category Create </h1>
+         <div>
+               <input type="text" v-model="newCount" >
+               <button @click="updateValue" type="submit">update</button>
+         </div>
+          <h1 class="text-center">Category Create {{ counter.count }}</h1>
           <div class="card">
                <form @submit.prevent="formSubmit">
                     <div class="mt-2">
                          <label for="userId" class="form-label">Name</label>
-                         <input type="text" v-model="category.name" id="userId" class="form-control">
+                         <input type="text" v-model="category.name"  id="userId" class="form-control">
                     </div>
                     <div class="mt-2">
                          <label for="body" class="form-label">Active</label>

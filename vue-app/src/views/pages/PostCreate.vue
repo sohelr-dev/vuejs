@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import type { PostFake } from '@/components/interfaces/Post.interfaces';
 import defaultPost from '@/components/interfaces/Post.interfaces';
+import { useCounterStore } from '@/store/counter';
 import axios from 'axios';
 import { reactive } from 'vue';
+
+const counter =useCounterStore();
 
 
 const post =reactive<PostFake>(defaultPost);
@@ -30,7 +33,8 @@ function formSubmit(){
 </script>
 <template>
      <div class="container">
-          <h1 class="text-center">Post Create </h1>
+          {{  }}
+          <h1 class="text-center">Post Create <span class="text-danger">{{ counter.count }}</span> </h1>
           <div class="card">
                <form @submit.prevent="formSubmit">
                     <div class="mt-2">

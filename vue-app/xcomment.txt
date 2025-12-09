@@ -11,3 +11,8 @@ Vue (Official)
 3.install bootstrap
 =========================
 npm install bootstrap
+
+
+4.pinia install
+=====================
+npm install pinia

@@ -3,8 +3,11 @@
 
 
 import type { PostFake } from '@/components/interfaces/Post.interfaces';
+import { useCounterStore } from '@/store/counter';
 import axios from 'axios';
 import { ref } from 'vue';
+
+const counter =useCounterStore();
 
 let posts = ref<PostFake[]>([]);
 axios.get("https://jsonplaceholder.typicode.com/posts")
@@ -21,11 +24,11 @@ axios.get("https://jsonplaceholder.typicode.com/posts")
 <template>
      <div class="conatiner">
           <div class="text-end">
-               <router-link to="posts/create" class="btn btn-success">Create Post</router-link>
+               <router-link to="posts/create" class="btn btn-success">Create Post <span class="text-danger">{{ counter.count }}</span></router-link>
           </div>
           <div class="card">
                <div class="card-header p-2">
-                    Manage Post
+                    Manage Post <span class="text-danger">{{ counter.count }}</span>
                </div>
                <div class="responsive">
                     <table class="table">
