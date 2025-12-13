@@ -20,7 +20,7 @@ function formSubmit() {
      formdata.append('is_inactive',category.is_inactive.toString());
      // axios.post('http://127.0.0.1:8000/api/categories', category);
      //for form data
-     axios.post('http://127.0.0.1:8000/api/categories', formdata)
+     axios.post('http://127.0.0.1:8001/api/categories', formdata)
      .then((res) => {
           console.log(res.data.id);
           if (res.data) {

@@ -32,6 +32,9 @@
         <router-link  class="me-3 py-2 link-body-emphasis text-decoration-none" to="/create-user"
           >User Create</router-link
         >
+        <router-link  class="me-3 py-2 link-body-emphasis text-decoration-none" to="/product"
+          >Product</router-link
+        >
         <router-link  class="me-3 py-2 link-body-emphasis text-decoration-none" to="/category"
           >Category</router-link
         >

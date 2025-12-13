@@ -11,7 +11,7 @@ const queryId =route.params.id
 // const categoryDeatails = ref<CategoryFake | null>(defaultCategory);
 const categoryDeatails = reactive<CategoryType >(defaultCategory);
 
-axios.get(`http://127.0.0.1:8000/api/categories/${queryId}`)
+axios.get(`http://127.0.0.1:8001/api/categories/${queryId}`)
      .then((res)=>{
           console.log(res);
           if(res.status ===200 || res.status ===201){

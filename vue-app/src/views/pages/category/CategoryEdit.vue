@@ -16,7 +16,7 @@ const queryId =route.params.id;
 
 
 
-axios.get(`http://127.0.0.1:8000/api/categories/${queryId}`)
+axios.get(`http://127.0.0.1:8001/api/categories/${queryId}`)
      .then((res)=>{
           console.log(res);
           if(res.status ===200 || res.status ===201){
@@ -33,7 +33,7 @@ axios.get(`http://127.0.0.1:8000/api/categories/${queryId}`)
 
 
 function formSubmit(){
-     axios.patch(`http://127.0.0.1:8000/api/categories/${queryId}`,category)
+     axios.patch(`http://127.0.0.1:8001/api/categories/${queryId}`,category)
      .then((res)=>{
           // console.log(res);
           if(res){

@@ -7,6 +7,9 @@ import App from './App.vue'
 import myRouterView from './routes/index.ts'
 import { createPinia } from 'pinia'
 
+const baseUrl= 'http://127.0.0.1:8001/';
+export default baseUrl;
+
 const pinia =createPinia();
 
 

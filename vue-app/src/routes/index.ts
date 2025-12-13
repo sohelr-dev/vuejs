@@ -11,6 +11,8 @@ import PostCreate from "@/views/pages/PostCreate.vue";
 import PostDetails from "@/views/pages/PostDetails.vue";
 import PostEdit from "@/views/pages/PostEdit.vue";
 import Princing from "@/views/pages/Princing.vue";
+import ProductCreate from "@/views/pages/Product/ProductCreate.vue";
+import ProductList from "@/views/pages/Product/ProductList.vue";
 import UserCreate from "@/views/pages/users/UserCreate.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
@@ -31,6 +33,11 @@ const myRouter =createRouter({
           {path:'/categories/create',component:CategoryCreate},
           {path:'/category-edit/:id',component:CategoryEdit},
           {path:'/create-user',component:UserCreate},
+          //product
+          {path:'/product',component:ProductList},
+          {path:'/product-details/:id',component:CategoryDeatails},
+          {path:'/products/create',component:ProductCreate},
+          {path:'/product-edit/:id',component:CategoryEdit},
 
      ]
 });
