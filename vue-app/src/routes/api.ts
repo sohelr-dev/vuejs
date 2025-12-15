@@ -13,7 +13,7 @@ const apiBaseURL = 'http://127.0.0.1:8001/api/';
 export const api = axios.create({
     baseURL: apiBaseURL,
     headers: {
-        'Content-Type': 'multipart/form-data',
+        'Content-Type': 'application/json',
         'Accept': 'application/json'
     }
 })
